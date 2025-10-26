@@ -1,19 +1,26 @@
 #include <iostream>
 
-#include "AdjacencyList.h"
+#include "CampusCompass.h"
 
 using namespace std;
 
 int main() {
-    int no_of_lines, power_iterations;
-    string from, to;
+    // initialize your main project object
+    CampusCompass compass;
+
+    // ingest CSV data
+    // compass
+
+
+    // the below is example code for parsing commandline input
+    int no_of_lines;
+    string command;
     cin >> no_of_lines;
-    cin >> power_iterations;
+    cin.ignore(); // ignore newline that first cin left over
     for (int i = 0; i < no_of_lines; i++) {
-        cin >> from;
-        cin >> to;
-        // Do Something
+        getline(cin, command);
+
+        // parse your commands however you see fit
+        compass.ParseCommand(command);
     }
-    //Create a graph object
-    // Created_Graph.PageRank(power_iterations);}
 }
